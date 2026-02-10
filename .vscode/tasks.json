@@ -1,0 +1,61 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "apiSolution",
+      "type": "promptString",
+      "description": "Path to .NET solution (.sln) (relative to workspace)",
+      "default": "src/api/<YourSolution>.sln"
+    },
+    {
+      "id": "webDir",
+      "type": "promptString",
+      "description": "React app directory (relative to workspace)",
+      "default": "src/web"
+    }
+  ],
+  "tasks": [
+    {
+      "label": "dotnet: restore",
+      "type": "shell",
+      "command": "dotnet",
+      "args": ["restore", "${input:apiSolution}"],
+      "problemMatcher": ["$msCompile"]
+    },
+    {
+      "label": "dotnet: build",
+      "type": "shell",
+      "command": "dotnet",
+      "args": ["build", "${input:apiSolution}", "-c", "Release"],
+      "problemMatcher": ["$msCompile"],
+      "dependsOn": ["dotnet: restore"]
+    },
+    {
+      "label": "dotnet: test",
+      "type": "shell",
+      "command": "dotnet",
+      "args": ["test", "${input:apiSolution}", "-c", "Release"],
+      "problemMatcher": ["$msCompile"],
+      "dependsOn": ["dotnet: build"]
+    },
+    {
+      "label": "web: install",
+      "type": "shell",
+      "command": "npm",
+      "args": ["ci"],
+      "options": {
+        "cwd": "${workspaceFolder}/${input:webDir}"
+      }
+    },
+    {
+      "label": "web: build",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build"],
+      "options": {
+        "cwd": "${workspaceFolder}/${input:webDir}"
+      },
+      "dependsOn": ["web: install"]
+    }
+  ]
+}

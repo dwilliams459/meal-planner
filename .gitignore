@@ -1,0 +1,38 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Node/React
+node_modules/
+dist/
+build/
+.vite/
+.next/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local env
+.env
+.env.*
+
+# Secrets/keys
+*.pfx
+*.snk
+*.key
+
+# Tooling
+coverage/
+TestResults/
+
+# MCP (local)
+.vscode/mcp.json

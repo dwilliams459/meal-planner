@@ -1,0 +1,23 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#0F1B88",
+        "titleBar.activeBackground": "#1626BE",
+        "titleBar.activeForeground": "#F9FAFE"
+    },
+    "files.eol": "\n",
+    "editor.formatOnSave": true,
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/build": true
+    },
+    "search.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/build": true
+    }
+}

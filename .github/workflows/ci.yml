@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: dotnet info
+        run: dotnet --info
+
+      # Enable once API is scaffolded
+      # - name: Restore
+      #   run: dotnet restore src/api/<YourSolution>.sln
+      # - name: Build
+      #   run: dotnet build src/api/<YourSolution>.sln -c Release --no-restore
+      # - name: Test
+      #   run: dotnet test src/api/<YourSolution>.sln -c Release --no-build
+
+      # Enable once web is scaffolded
+      # - name: Setup Node
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20'
+      # - name: Install
+      #   working-directory: src/web
+      #   run: npm ci
+      # - name: Build web
+      #   working-directory: src/web
+      #   run: npm run build

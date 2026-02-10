@@ -1,0 +1,22 @@
+{
+  "servers": {
+    "github": {
+      "description": "GitHub MCP server (example placeholder)",
+      "command": "<path-to-github-mcp-server>",
+      "args": [],
+      "env": {
+        "GITHUB_TOKEN": "<do-not-store-here>"
+      }
+    },
+    "azure-devops": {
+      "description": "Azure DevOps MCP server (example placeholder)",
+      "command": "<path-to-azure-devops-mcp-server>",
+      "args": [],
+      "env": {
+        "AZDO_ORG_URL": "https://dev.azure.com/<org>",
+        "AZDO_PROJECT": "<project>",
+        "AZDO_TOKEN": "<do-not-store-here>"
+      }
+    }
+  }
+}
