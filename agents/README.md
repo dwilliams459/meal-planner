@@ -9,6 +9,7 @@ Suggested flow:
 
 Agents:
 - `tech-lead.md`
+- `business-analyst.md`
 - `dotnet-api.md`
 - `react-frontend.md`
 - `sqlserver-data.md`
