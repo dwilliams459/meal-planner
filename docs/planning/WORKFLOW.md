@@ -8,8 +8,10 @@
 5. Verify: tests + acceptance checks.
 
 ## Linking
-- Prefer linking PRs to a single issue/work item.
-- If using Azure DevOps Boards, include the work item ID in PR title/body.
+- Work tracking source of truth: **Azure DevOps Boards**.
+- Prefer linking PRs to a single work item.
+- Include the work item in PR description using the `AB#<id>` convention.
+- Prefer branch naming that includes the work item id, e.g. `feat/123-short-title`.
 
 ## Repository conventions
 - No secrets in repo.

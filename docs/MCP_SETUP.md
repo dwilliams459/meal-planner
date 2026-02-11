@@ -6,6 +6,9 @@ This repo is intended to work well with Copilot Chat tooling and Model Context P
 - Use MCP servers to interact with GitHub.com and Azure DevOps from your dev environment.
 - Keep secrets out of the repo.
 
+Work tracking source of truth: **Azure DevOps Boards**.
+See `docs/devops/INTEGRATIONS.md` for the repo/project links and conventions.
+
 ## GitHub
 - Install/enable the GitHub Pull Requests extension.
 - Sign into GitHub in VS Code.

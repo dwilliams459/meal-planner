@@ -2,38 +2,38 @@
 # Note: update paths once src/api and src/web are scaffolded.
 
 trigger:
-- main
+  - main
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: "windows-latest"
 
 stages:
-- stage: Build
-  jobs:
-  - job: Build
-    steps:
-    - task: UseDotNet@2
-      inputs:
-        packageType: 'sdk'
-        version: '8.x'
+  - stage: Build
+    jobs:
+      - job: Build
+        steps:
+          - task: UseDotNet@2
+            inputs:
+              packageType: "sdk"
+              version: "8.x"
 
-    - script: dotnet --info
-      displayName: 'dotnet info'
+          - script: dotnet --info
+            displayName: "dotnet info"
 
-    # - script: dotnet restore src/api/<YourSolution>.sln
-    #   displayName: 'Restore'
+        # - script: dotnet restore src/api/<YourSolution>.sln
+        #   displayName: 'Restore'
 
-    # - script: dotnet build src/api/<YourSolution>.sln -c Release --no-restore
-    #   displayName: 'Build'
+        # - script: dotnet build src/api/<YourSolution>.sln -c Release --no-restore
+        #   displayName: 'Build'
 
-    # - script: dotnet test src/api/<YourSolution>.sln -c Release --no-build
-    #   displayName: 'Test'
+        # - script: dotnet test src/api/<YourSolution>.sln -c Release --no-build
+        #   displayName: 'Test'
 
-    # React build (requires Node)
-    # - task: NodeTool@0
-    #   inputs:
-    #     versionSpec: '20.x'
-    # - script: npm ci
-    #   workingDirectory: src/web
-    # - script: npm run build
-    #   workingDirectory: src/web
+        # React build (requires Node)
+        # - task: NodeTool@0
+        #   inputs:
+        #     versionSpec: '20.x'
+        # - script: npm ci
+        #   workingDirectory: src/web
+        # - script: npm run build
+        #   workingDirectory: src/web
