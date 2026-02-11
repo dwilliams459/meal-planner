@@ -50,3 +50,17 @@ For each story, produce:
 - MVP scope is explicit
 - Non-functional needs are stated as business constraints (not solutions)
 - Open questions are clearly enumerated
+
+## Starter prompts (copy/paste)
+
+### 1) Requirements interview (Q&A only)
+“Act as the Business Analyst agent in `agents/business-analyst.md`. Ask me one question at a time to complete a PRD for Meal-prep. Keep questions non-technical. Don’t write the PRD yet. Summarize every 5 questions.”
+
+### 2) Draft PRD from answers
+“Using my answers, create `docs/prd/PRD_001_mvp.md` using `docs/prd/PRD_TEMPLATE.md`. Keep assumptions explicit and list open questions at the end.”
+
+### 3) Refine PRD (gap pass)
+“Review `docs/prd/PRD_001_mvp.md` for ambiguity, missing acceptance criteria, and scope creep. Propose only the next 5 best follow-up questions to improve it.”
+
+### 4) Convert PRD → user stories
+“From `docs/prd/PRD_001_mvp.md`, generate user stories with Given/When/Then acceptance criteria. Group by epic, and label each as MVP/Next/Later.”
